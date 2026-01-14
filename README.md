@@ -21,6 +21,7 @@ Eyvar Admin Login/
 │   ├── favicon.svg         # Browser favicon (modern)
 │   ├── apple-touch-icon.png # iOS home screen icon
 │   ├── site.webmanifest    # PWA manifest
+│   ├── logo.svg            # Eyvar logo
 │   ├── Device.png          # Phone mockup image
 │   ├── Phone Image.png     # Background image
 │   ├── eye.svg             # Password show icon
