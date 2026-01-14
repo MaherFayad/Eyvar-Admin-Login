@@ -64,6 +64,9 @@ function initOTPInputs() {
             const value = this.value.replace(/[^0-9]/g, '');
             this.value = value.slice(0, 1);
 
+            // Clear error state when user starts typing
+            clearOTPError();
+
             // Auto-advance to next input
             if (value && index < otpInputs.length - 1) {
                 otpInputs[index + 1].focus();
@@ -317,17 +320,32 @@ function validateOTPForm(form) {
     const otpValue = getOTPValue();
 
     if (otpValue.length !== APP_CONFIG.OTP_LENGTH) {
-        // Highlight empty inputs
-        const otpInputs = document.querySelectorAll('.otp-input');
-        otpInputs.forEach(input => {
-            if (!input.value) {
-                input.classList.add('error');
-            }
-        });
+        showOTPError();
+        return false;
+    }
+
+    // TODO: Remove this test condition before production
+    // Test OTP "1111" always shows error for testing purposes
+    if (otpValue === '1111') {
+        showOTPError();
         return false;
     }
 
     return true;
+}
+
+function showOTPError() {
+    const otpInputs = document.querySelectorAll('.otp-input');
+    otpInputs.forEach(input => {
+        input.classList.add('error');
+    });
+}
+
+function clearOTPError() {
+    const otpInputs = document.querySelectorAll('.otp-input');
+    otpInputs.forEach(input => {
+        input.classList.remove('error');
+    });
 }
 
 function validateChangePasswordForm(form) {

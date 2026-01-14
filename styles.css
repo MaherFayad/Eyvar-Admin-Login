@@ -402,6 +402,12 @@ input::-webkit-credentials-auto-fill-button {
 
 .otp-input.error {
     border-color: var(--alert-error);
+    box-shadow: var(--shadow-error);
+}
+
+.otp-input.error:focus {
+    border-color: var(--alert-error);
+    box-shadow: var(--shadow-error);
 }
 
 /* ====================================
