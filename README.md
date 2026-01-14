@@ -17,6 +17,10 @@ Eyvar Admin Login/
 ├── constants.js            # Configuration constants
 ├── app.js                  # Application logic
 ├── assets/
+│   ├── favicon.ico         # Browser favicon (legacy)
+│   ├── favicon.svg         # Browser favicon (modern)
+│   ├── apple-touch-icon.png # iOS home screen icon
+│   ├── site.webmanifest    # PWA manifest
 │   ├── Device.png          # Phone mockup image
 │   ├── Phone Image.png     # Background image
 │   ├── eye.svg             # Password show icon
