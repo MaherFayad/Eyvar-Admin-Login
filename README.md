@@ -168,7 +168,7 @@ Located in `styles.css`:
 
 1. **Login Flow**: Enter any email/password to see validation
 2. **Forgot Password**: Enter email → auto-navigates to OTP page
-3. **OTP**: Enter 4 digits, timer counts down, "Resend" appears after 60s
+3. **OTP**: Enter 4 digits, timer counts down, "Resend" appears after 60s, use 1111 as OTP to test error state
 4. **Change Password**: Must match requirements and confirm
 
 ---
